@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.box {
+  width: 500px;
+  height: 100px;
+  padding: 20px;
+  border: 5px solid blue;
+  background: lightgreen;
+}
+
+.content-box {
+  box-sizing: content-box; /* default */
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box content-box">
+    <strong>content-box</strong><br>
+    width = 200px (content only)<br>
+    + padding (20px each side)<br>
+    + border (5px each side)<br>
+    → Final width = 200 + 40 + 10 = <b>250px</b><br>
+    → Final height = 100 + 40 + 10 = <b>150px</b>
+  </div>
+
+  <div class="box border-box">
+    <strong>border-box</strong><br>
+    width = 200px (includes content + padding + border)<br>
+    Content shrinks automatically<br>
+    → Final width = <b>200px</b><br>
+    → Final height = <b>100px</b>
+  </div>
+</div>
+
+</body>
+</html>
